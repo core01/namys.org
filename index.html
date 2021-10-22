@@ -45,28 +45,31 @@
     .footer {
         margin-top: 50px;
     }
-    .footer__item {
-        color: #283564;
-        font-size: 34px;
-        margin: 0 0 10px;
-        padding: 0;
-        text-align: center;
+    .footer__links {
+        font-size: 24px;
+    }
+    .footer__link:not(:last-child) {
+        margin-right: 10px;
     }
 
     @media only screen and (max-width: 960px) {
         .header__item {
             font-size: 24px;
         }
-        .footer__item {
+        .footer__links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             font-size: 18px;
+        }
+        .footer__link {
+            margin-right: 0;
+            margin-bottom: 10px;
         }
     }
     @media only screen and (max-width:600px) {
         .header__item {
             font-size: 24px;
-        }
-        .footer__item {
-            font-size: 18px;
         }
     }
 </style>
@@ -80,7 +83,11 @@
 
     <img class="badge" src="Namys.svg" alt="NAMYS.org"/>
     <div class="footer">
-        <h5 class="footer__item">Сайт находится в разработке</h5>
+        <div class="footer__links">
+            <a class="footer__link" target="_blank" href="https://drive.google.com/file/d/1TcURpgwoQqHvwjw-7rs1nElIP9v11oWR/view?usp=sharing">Презентация</a>
+            <a class="footer__link" target="_blank" href="https://youtu.be/1oAviAotyc8">Видео (YouTube)</a>
+            <a class="footer__link" target="_blank" href="https://drive.google.com/file/d/1RPs3Xdsd5lotic18TKCNvVrgkjHfAWGh/view?usp=sharing">Видео (Скачать)</a>
+        </div>
     </div>
 
 </div>
